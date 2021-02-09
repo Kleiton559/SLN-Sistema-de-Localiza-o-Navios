@@ -1,0 +1,292 @@
+body {
+	margin: 0;
+	background-color:black;
+	background-repeat: no-repeat;
+	background-position: center;
+	color:white;	
+	margin-bottom: 0px;}
+	
+.mapa{
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.mapa p {
+	text-align: center;
+
+
+}
+ul.topnav {
+	margin-top: 0px;
+	list-style-type: none;
+	
+    margin-left:10px;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	transition: background-color 1s;
+	width: 1290px;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+	margin:0;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 35px 35px;
+	text-decoration: none;
+	transition: background-color 4s;
+	
+}
+
+ul.topnav li a:hover:not(.active) {background-color:#111; box-shadow : O 25px 40px rgba(0,0,0,.5);}
+
+ul.topnav li a.active {
+	background-color: blue;
+	
+	}
+
+ul.topnav li.right {float: right;
+}
+
+ul.topnav li img{
+	height:85px;
+	width:65px;
+	
+}
+
+input{
+	margin-top:3px;
+	width:500px;
+	height:25px;
+	margin-left:395px;
+	border-radius:10px;
+	}
+
+
+
+
+
+.titulonavio{
+	background-image:url("images/portos.png");
+	height:300px;
+	background-position:center;
+	}
+
+.fila1{
+	display: flex;
+}
+ul.fila1 {
+		  list-style-type: none;
+		  margin-left:75px;
+		  padding: 0;
+		  overflow: hidden;
+		  margin-bottom: 1px;
+		  
+		  
+	}
+
+
+
+
+
+
+.tituloportonovo p{
+	text-align:center;
+	
+}
+
+.tituloportonovo img{
+	height:300px;
+	
+}
+
+.informacoesporto{
+	margin-left:140px;
+}
+
+.informacoesporto li {
+	float: left;
+	background-color:gray;
+	color:black;
+	margin-left:100px;
+	border:3px;
+	border-radius:10px;
+	
+	}
+
+.informacoesporto ul {
+	list-style-type: none;
+	overflow: hidden;
+	margin-left:100px;
+	margin-left:50px;
+	
+}
+
+.informacoesporto li a {
+	margin:0;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 5px 80px;
+	text-decoration: none;
+	align:center;
+
+	
+}
+
+ .active2 {
+	background-color: blue;
+	border-radius:10px;
+	
+	
+	}
+
+.informacoesgerais{
+	margin-left:102px;
+	margin-right:102px;
+	margin-bottom:10px;
+	background-color: blue;
+}
+.informacoesgerais p{
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 10px;
+	color:black;
+	font-size: 19px;
+	opacity: 1;
+}
+.informacoesgerais h2{
+	margin-left: 10px;
+	margin-right: 10px;
+	color:black;
+	font-size: 33px;
+	display: block;
+}
+
+
+.tinavio{
+	background-color:yellow;
+	height:40p;
+}
+.listaportos{
+	margin-left: 100px;;
+
+}
+
+.rodape{
+	margin-top: 20px;
+	background-color: #333;
+	height:500px;
+	display: flex;
+}
+
+
+.infodesenvolvedor{
+	margin-top: 50px;
+
+	margin-left: 200px;
+}
+.imagemrodape{
+	margin-left: 50px;
+	margin-top: 50px;
+
+}
+.menurodape{
+	margin-left: 50px;
+	margin-top: 50px;
+
+}
+.container1{
+	margin-top:10px;
+	display:flex;
+	margin-left:150px;
+	width:1200px;
+	
+}
+
+.container1 .box{
+	overflow:hidden;
+	transition:0.5s;
+	
+}
+.container1 .box:hover
+{  	
+	z-index:1;
+	transform: scale(1.05);
+	box-shadow : O 25px 40px rgba(0,0,0,.5);
+	border-radius: 9px;
+	
+}
+
+.container1 .box  .imBx{
+	
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	
+}
+
+.container1 .box  .imBx img{
+	
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+
+.imgBx img{
+	height: 100px;
+	width: 350px;
+	
+}
+
+.content div h2{
+	text-align: center;
+	
+}
+.localizar{
+	margin-top: -10px;
+	text-align: center;
+	color:black;
+	font-size: 50px;
+	font-family:'Times New Roman', Times, serif
+}
+.pesquisarnavios{
+	margin-left: 0px;
+	margin-right:0px;
+	margin-top: 0px;
+	background-image: url("images/navio.jpg");
+	background-repeat: no-repeat;
+	height:300px;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 1500px 500px;
+}
+button{
+	height: 30px;
+	width: 200px ;
+	align-items: center;
+	border-radius: 10px;
+}
+.buttonp{
+	text-align: center;
+}
+button:hover(){
+	background-color: dimgrey;
+}
+.mapa{
+	border-radius: 20px;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+iframe{
+	border-radius: 20px;
+}
