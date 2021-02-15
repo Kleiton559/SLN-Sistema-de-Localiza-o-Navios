@@ -6,7 +6,21 @@
 		<title>	Sistema de Localização de Navios</title>
 		<link rel="stylesheet" href="estilo.css">
 
-	
+		<script>
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
+			</script>
 	</head>
 	
 	<body>
@@ -14,59 +28,275 @@
 		
 		
 		<ul class="topnav">	
-			<li><img src="images/logo.png"></li>
+			
 			<li><a href="index.html">Home</a></li>
 			<li><a href="navios.html">Navios</a></li>
 			<li><a href="portos.html">Portos</a></li>
-			<li><a href="sobre.html">Sobre</a></li>
+			
 			<li class="right"><a href="login.html">Login</a></li>
 		</ul>
 		
-		<div class="tituloportonovo">
+		<div class="tituloportonovo" >
 			<p><img src="images/portonovo.png"></p>
 		</div>
 		
-		<div class="informacoesporto">
-			<ul>
+		
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'verinformacoes')">Detalhes do Porto</button>
+			<button class="tablinks" onclick="openCity(event, 'partidas')">Partidas</button>
+			<button class="tablinks" onclick="openCity(event, 'chegadas')">Chegadas</button>
 			
-				<li><a class="active2" href="informacoesgreais.html">Informaçoes Gerais</a></li>
-				<li><a href="partidaschegadas.html">Partidas e Chegadas</a></li>
+			
+
+		</div>
+
+		<div id="verinformacoes" class="tabcontent">
+			
+			<div class="textinfo">
+				<h1 class="tabinfo">Informações</h1>
+				<p class="texto">Localizado na ilha de Santo Antão, o Porto Novo é uma infra-estrutura que desempenha um papel de estimulador
+			 e promotor de negócios, assegurando uma interface ininterrupta e célere entre os transportes terrestres e 
+			 marítimos para o tráfego de cabotagem, desde a origem ao destino, essencialmente a ilha de São Vicente.</p>
+			 	<p class="texto">A gare encontra-se equipada com escadas rolantes, permitindo que os passageiros usufruam das melhores
+				Este porto foi recentemente remodelado com as obras realizadas em 2013, que permitiram a expansão do seu berço de 
+			atracação, bem como do seu terrapleno, e a construção de um edifício para a gare marítima com 2000 m2 de área 
+			 condições, tanto na chegada à ilha, como na hora de partir.</p>
+			 
+			<h1 class="tabinfo">Características Físicas do Porto</h1>
+			<p class="texto">Inaugurado em 1962, e expandido em 2013, o porto possui três cais com, respectivamente, 45, 115 e 135 metros. Para o armazenamento 
+			de mercadorias, o porto dispõe de um armazém coberto com uma área de 450 m2.</p>
+		  
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+		  
+		<div id="chegadas" class="tabcontent">
+			<div class="textinfo1">
+				<h1 class="tabinfo">Chegadas</h1>
+				<table align="center" border="1">	
+					<tr>
+						<td align="center"><b>ID:Viagem</b></td>
+						<td align="center"><b>Nome Navio</b></td>
+						<td align="center"><b>Horario de Chegadas</b></td>	
+						<td align="center"><b>Porto de Origem</b></td>
+						<td align="center"><b>Duração media de Viagem(H)</b></td>	
+						
+					</tr>
+					<tr>
+						<td align="center">0001</td>
+						<td align="center">Navieira Armas</td>
+						<td align="center">9H</td>
+						<td align="center">Porto Grande</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Navio Chiquinho</td>
+						<td align="center">10h</td>
+						<td align="center">Porto Grande</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+			
+					<tr>
+						<td align="center">0001</td>
+						<td align="center">Navieira Armas</td>
+						<td align="center">15H</td>
+						<td align="center">Porto Grande</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Navio Chiquinho</td>
+						<td align="center">16h</td>
+						<td align="center">Porto Grande</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>		
+				</table>	
+			</div>
+		</div>
+
+
+		<div id="partidas" class="tabcontent">
+			<div class="textinfo1"> 
+				<h1 class="tabinfo">Partidas</h1>
+				<table align="center" border="1">	
+					<tr>
+							<td align="center"><b>ID:Viagem</b></td>
+							<td align="center"><b>Nome Navio</b></td>
+							<td align="center"><b>Horario de Partida</b></td>	
+							<td align="center"><b>Porto de Destino</b></td>
+							<td align="center"><b>Duração media de Viagem(H)</b></td>	
+					
+						</tr>
+						<tr>
+							<td align="center">0001</td>
+							<td align="center">Navieira Armas</td>
+							<td align="center">10h</td>
+							<td align="center">Porto Grande</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>	
+						<tr>
+							<td align="center">0002</td>
+							<td align="center">Navio Chiquinho</td>
+							<td align="center">11h</td>
+							<td align="center">Porto Grande</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>
+						<tr>
+							<td align="center">0001</td>
+							<td align="center">Navieira Armas</td>
+							<td align="center">16h</td>
+							<td align="center">Porto Grande</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>	
+						<tr>
+							<td align="center">0002</td>
+							<td align="center">Navio Chiquinho</td>
+							<td align="center">17h</td>
+							<td align="center">Porto Grande</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>		
+					</table>
 				
-			</ul>
+			</div>		
+		</div>
+		 
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<a href="portonovo.html"><img src="images/miniaturas/portonovominiatura.png"></a>
+				</div>
+				<div class="content">
+					<div>
+						
+						
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<a href="portogrande.html"><img src="images/miniaturas/saovicenteminiatura.png"></a>
+				</div>
+				<div class="content">
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portotarraflaminiatura.png">
+				</div>
+				<div class="content">
+					<div>
+						
+						
+						
+					</div>
+					
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portopalmeirasal.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portosalereiminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portoinglesmaiominiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portodapraiaminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portovaledoscavaleirosminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portofurnaminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+		
+		</div>
+		 
+
 			
 				
-		</div>
-		
-		<div class="informacoesgerais">
-			<br>
-			<h2>Porto Novo</h2>
-		
-			<p>
-				Localizado na ilha de Santo Antão, o Porto Novo é uma infra-estrutura que desempenha um papel de estimulador e promotor de negócios, assegurando uma interface ininterrupta e célere entre os transportes
-				terrestres e marítimos para o tráfego de cabotagem, desde a origem ao destino, essencialmente a ilha de São Vicente .
-			</p>	
-			
-			<p>
-				Este porto foi recentemente remodelado com as obras realizadas em 2013, que permitiram a expansão do seu berço de atracação, bem como do seu terrapleno, e a construção de um edifício para a gare marítima
-				com 2000 m2 de área coberta. A gare encontra-se equipada com escadas rolantes, permitindo que os passageiros usufruam das melhores condições, tanto na chegada à ilha, como na hora de partir.
-			</p>	
-			<br>
-			<h2>Carateristicas Fisicas do Porto</h2>
-			<p>Inaugurado em 1962, e expandido em 2013, o porto possui três cais com, respectivamente, 45, 115 e 135 metros. Para o armazenamento de mercadorias, o porto dispõe de um armazém coberto com uma área de 450 m2.</p>
-
-
-
-		
-		
-		</div>
 		
 		
 		
 		
-		<div class="rodape">
-			
 		
-		</div>
+		
+		
 		
 	
 	</body>

@@ -6,6 +6,22 @@
 		<title>	Sistema de Localização de Navios</title>
 		<link rel="stylesheet" href="estilo.css">
 
+		<script>
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
+			</script>
+
 	
 	</head>
 	
@@ -14,11 +30,11 @@
 		
 		
 		<ul class="topnav">	
-			<li><img src="images/logo.png"></li>
+			
 			<li><a href="index.html">Home</a></li>
 			<li><a href="navios.html">Navios</a></li>
 			<li><a href="portos.html">Portos</a></li>
-			<li><a href="sobre.html">Sobre</a></li>
+			
 			<li class="right"><a href="login.html">Login</a></li>
 		</ul>
 		
@@ -26,29 +42,270 @@
 			<p><img src="images/portodotarrafal.png"></p>
 		</div>
 		
-		<div class="informacoesporto">
-			<ul>
-			
-				<li><a class="active2" href="informacoesgreais.html">Informaçoes Gerais</a></li>
-				<li><a href="partidaschegadas.html">Partidas e Chegadas</a></li>
-				
-			</ul>
-			
-				
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'verinformacoes')">Detalhes do Porto</button>
+			<button class="tablinks" onclick="openCity(event, 'partidas')">Partidas</button>
+			<button class="tablinks" onclick="openCity(event, 'chegadas')">Chegadas</button>
 		</div>
 		
-		<div class="informacoesgerais">
-		
-		
+		<div id="verinformacoes" class="tabcontent">
+			<div class="textinfo">
+				<h1 class="tabinfo">Informações</h1>
+				<p class="texto">
+					
+					Situado na ilha de São Nicolau, o Porto do Tarrafal destina-se, essencialmente, ao tráfego interilhas. 
+					Recebendo regularmente navios provenientes de diversas ilhas, este porto constitui-se como um factor importante
+					de interligação da ilha de São Nicolau com o resto do arquipélago.
+
+				</p>
+				<h1 class="tabinfo">Características Físicas do Porto</h1>
+				<p class="texto">
+					Construído em 1991, o Porto do Tarrafal dispõe de dois cais, com, respectivamente, 80 e 45 metros de comprimento, e 
+					profundidades que variam entre os 3 e os 5 metros. Para o depósito de mercadorias, existe no porto um armazém coberto
+					 com uma área de 450 m2. O porto está dotado de uma rampa metálica  roll-on / roll-off .
+				</p>
+			</div>
 		</div>
-		
-		
-		
-		
-		<div class="rodape">
+		<div id="chegadas" class="tabcontent">
+			<div class="textinfo1">
+				<h1 class="tabinfo">Chegadas</h1>
+				<table align="center" border="1">	
+					<tr>
+						<td align="center"><b>ID:Viagem</b></td>
+						<td align="center"><b>Nome Navio</b></td>
+						<td align="center"><b>Horario de Chegadas</b></td>	
+						<td align="center"><b>Porto de Origem</b></td>
+						<td align="center"><b>Duração media de Viagem(H)</b></td>	
+						
+					</tr>
+					<tr>
+						<td align="center">0001</td>
+						<td align="center">Navieira Armas</td>
+						<td align="center">11H</td>
+						<td align="center">Porto Novo</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Navio Chiquinho</td>
+						<td align="center">12h</td>
+						<td align="center">Porto Novo</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
 			
+					<tr>
+						<td align="center">0001</td>
+						<td align="center">Navieira Armas</td>
+						<td align="center">17H</td>
+						<td align="center">Porto Novo</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Navio Chiquinho</td>
+						<td align="center">17h</td>
+						<td align="center">Porto Novo</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+					
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Inter-Ilhas</td>
+						<td align="center">21h</td>
+						<td align="center">Porto Praia</td>
+						<td align="center">6Hora(s)</td>
+
+					</tr>	
+
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Kriola</td>
+						<td align="center">16h</td>
+						<td align="center">Porto Tarrafal</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+
+					<tr>
+						<td align="center">0002</td>
+						<td align="center">Navio Chiquinho</td>
+						<td align="center">17h</td>
+						<td align="center">Porto Novo</td>
+						<td align="center">1Hora(s)</td>
+
+					</tr>	
+				</table>	
+			</div>
+		</div>
+		<div id="partidas" class="tabcontent">
+			<div class="textinfo1"> 
+				<h1 class="tabinfo">Partidas</h1>
+				<table align="center" border="1">	
+					<tr>
+							<td align="center"><b>ID:Viagem</b></td>
+							<td align="center"><b>Nome Navio</b></td>
+							<td align="center"><b>Horario de Partida</b></td>	
+							<td align="center"><b>Porto de Destino</b></td>
+							<td align="center"><b>Duração media de Viagem(H)</b></td>	
+					
+						</tr>
+						<tr>
+							<td align="center">0001</td>
+							<td align="center">Navieira Armas</td>
+							<td align="center">8h</td>
+							<td align="center">Porto Novo</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>	
+						<tr>
+							<td align="center">0002</td>
+							<td align="center">Navio Chiquinho</td>
+							<td align="center">9h</td>
+							<td align="center">Porto Grande</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>
+						<tr>
+							<td align="center">0001</td>
+							<td align="center">Kriola</td>
+							<td align="center">16h</td>
+							<td align="center">Porto Vale dos Cavaleiros</td>
+							<td align="center">10Hora(s)</td>
+
+						</tr>	
+						<tr>
+							<td align="center">0002</td>
+							<td align="center">Inter-Ilhas/td>
+							<td align="center">22h</td>
+							<td align="center">Porto Sal-Rei</td>
+							<td align="center">1Hora(s)</td>
+
+						</tr>		
+				</table>
+			</div>
+		</div>			
+
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<a href="portonovo.html"><img src="images/miniaturas/portonovominiatura.png"></a>
+				</div>
+				<div class="content">
+					<div>
+						
+						
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<a href="portogrande.html"><img src="images/miniaturas/saovicenteminiatura.png"></a>
+				</div>
+				<div class="content">
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portotarraflaminiatura.png">
+				</div>
+				<div class="content">
+					<div>
+						
+						
+						
+					</div>
+					
+				</div>
+			</div>
 		
 		</div>
+		
+		
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portopalmeirasal.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portosalereiminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portoinglesmaiominiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		<div class="container1">
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portodapraiaminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portovaledoscavaleirosminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="box">
+				<div class="imgBx">
+					<img src="images/miniaturas/portofurnaminiatura.png">
+				</div>
+				<div class="content">
+					
+					
+				</div>
+			</div>
+		
+		</div>
+
+		
+		
+		
+		
+		
+		
 		
 	
 	</body>

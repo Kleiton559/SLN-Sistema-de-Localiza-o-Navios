@@ -53,7 +53,8 @@
 			color: #5F7C8A;
 			border:0;
 			border-radius: 20px	;
-			transition:1s;
+            transition:1s;
+            margin:10px 0;
 		}
 		form input[type=submit]:hover{
 			background-color:#4A5F6A;
@@ -85,11 +86,13 @@
 	<body>
 		
 		<form>
-			<h3>Login</h3>
-			<input type="text" id="email" name="email" placeholder="Seu email...">
-			<input type="password" name="senha" placeholder="Sua senha...">
-			<a href="modouser.html"><input type="submit" value="Entrar"></a>
-			<a href="telaregistar.html">Registrar</a>
+			<h3>Tela de Registo</h3>
+			<input type="text" id="email" name="nome" placeholder="Nome">
+            <input type="text" id="email" name="nome" placeholder="Email">
+            <input type="password" name="senha" placeholder="Senha">
+            <input type="submit" name="acao" value="Registrar"><br>
+            <a href="login.html"><input type="submit" name="acao" value="Cancelar"></a>
+			
 
 		</form>
 		

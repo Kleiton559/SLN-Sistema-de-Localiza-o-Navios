@@ -4,18 +4,23 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>	Sistema de Localização de Navios</title>
-		
-
 	
-	</head>
-	<style>
-		*{	
-			margin:0;padding:0;box-sizing: border-box;
+		<style>
+            h1{text-align:center;
+			margin-left:-80px; 
+            }
 
-		}
+			hr{
+				height:10px;
+				background-color: aquamarine;
+				border-color: aquamarine;;
+				width:380px;
+				
+			}
+            p{text-align: center;}
 
-		body{
-			background-color: #5F7C8A;
+            body{
+			background-color:white;
 
 		}
 
@@ -67,39 +72,40 @@
 			outline:0;
 		}
 
+			
+        </style>
 
-
-
-	</style>
-
-
-	<script>
-		var email = document.getElementById('email');
-
-		email.addEventListener('focus',()=>{
-			email.style.borderColor=#5F7C8A;
-		})
-
-	</script>
+	</head>
 	
 	<body>
-		
-		<form>
-			<h3>Login</h3>
-			<input type="text" id="email" name="email" placeholder="Seu email...">
-			<input type="password" name="senha" placeholder="Sua senha...">
-			<a href="modouser.html"><input type="submit" value="Entrar"></a>
-			<a href="telaregistar.html">Registrar</a>
+		<h1>MODO UTILIZADOR-Navio</h1>
+		<hr>        
+		<div class="containericon">
+            
+            <div class="incon1">
+                
+               
+
+            </div>
+            
+        
+        </div>		
+        
+        
+        <form>
+			<h3>Registar Navio</h3>
+			<input type="text" id="email" name="email" placeholder="Nome do Navio">
+            <input type="text" name="nome" placeholder="Responsavel do Navio">
+            <input type="text" name="nome" placeholder="Nome da Companhia">
+            <input type="submit" name="acao" value="Registar Navio">
+            <input type="submit" name="acao" value="Cancelar">
+			
 
 		</form>
 		
 		
-		
 
-		
-		
-		
-		
+
 		
 		
 		
