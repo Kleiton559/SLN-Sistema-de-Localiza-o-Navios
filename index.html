@@ -1,110 +1,77 @@
 <!DOCTYPE html>
-<html>	
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>	Sistema de Localização de Navios</title>
-		<link rel="stylesheet" href="estilo.css">
-		<style>
-			.caixa_reposta{
-				border: 1px solid black;
-				height:200px;
-				background-image: url("images/navios/qs.png");
-				border-radius:10px;
-				background-size: 100px 100px;
-				background-repeat:no-repeat;
-				background-position: center;
-				padding-left:30px;	
-				padding-top:30px;		}
+<html>
 
-		</style>
-		
-		<script>
-			function procurarNavio(){
-				var obternome = document.getElementById("proc").value;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema de Localização de Navios</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <style>
+        .caixa_reposta {
+            border: 1px solid black;
+            height: 200px;
+            background-image: url("./images/navios/qs.png");
+            border-radius: 10px;
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+    </style>
 
-				if (obternome == "Armas"){
-					document.getElementById("h2demo").innerHTML = "ARMAS";
-					document.getElementById("demo").innerHTML="<b>Position:</b>1000milhas<br><b>Porto Partida:</b>Porto Grande <br><b>Porto Chegada:</b>Porto Novo<br><b>Duraçao Vagem:</b>1 HORA<br><b>Tempo Previsto de chegada:</b>40 minuto(s) restantes<br>"
-				}
-				else if (obternome == "Kriola"){
-					document.getElementById("h2demo").innerHTML = "Kriola";
-					document.getElementById("demo").innerHTML="<b>Position:</b>10milhas<br><b>Porto Partida:</b>Porto da Praia <br><b>Porto Chegada:</b>Porto Sal-Rei<br><b>Duraçao Vagem:</b>5 HORA <b><br>Tempo Previsto de chegada:</b>120 minuto(s) restantes<br>"
-				}
-					
-				
-			
+    <script>
+        function procurarNavio() {
+            var obternome = document.getElementById("proc").value;
 
-			}
+            if (obternome == "Armas") {
+                document.getElementById("h2demo").innerHTML = "ARMAS";
+                document.getElementById("demo").innerHTML = "<b>Position:</b>1000milhas<br><b>Porto Partida:</b>Porto Grande <br><b>Porto Chegada:</b>Porto Novo<br><b>Duraçao Vagem:</b>1 HORA<br><b>Tempo Previsto de chegada:</b>40 minuto(s) restantes<br>"
+            } else if (obternome == "Kriola") {
+                document.getElementById("h2demo").innerHTML = "Kriola";
+                document.getElementById("demo").innerHTML = "<b>Position:</b>10milhas<br><b>Porto Partida:</b>Porto da Praia <br><b>Porto Chegada:</b>Porto Sal-Rei<br><b>Duraçao Vagem:</b>5 HORA <b><br>Tempo Previsto de chegada:</b>120 minuto(s) restantes<br>"
+            }
+        }
+    </script>
 
+</head>
 
-		</script>	
+<body>
+    <div>
+        <ul class="topnav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="./pages/navios.html">Navios</a></li>
+            <li><a href="./pages/portos.html">Portos</a></li>
+            <li class="right"><a href="./pages/login.html">Login</a></li>
+        </ul>
+    </div>
 
-	</head>
-	
-	<body>
-		<div>
-			<ul class="topnav">	
-				
-				<li><a class="active" href="index.html">Home</a></li>
-				<li><a href="navios.html">Navios</a></li>
-				<li><a href="portos.html">Portos</a></li>
-				<li class="right"><a href="login.html">Login</a></li>
-			
-		
-			</ul>
-		</div>	
-		
-		<div class="pesquisarnavios">
-			
-			<h2 class="localizar">Localizar Navio</h2>
-			<form >
-				<input type="text" id="proc">
-			</form>
-			<p class="buttonp"><button class="naviosearch" type="button" onclick="procurarNavio()">Pesquisar</button></p>			
-			
-		</div>
-		<div class="caixa_reposta">
-			
-			<h2 id="h2demo"></h2>
-			<p id="demo"></p>
-			<a id="linkdemo"></a>
-			
+    <div class="container">
+        <div class="pesquisarnavios">
+            <h2 class="localizar">Localizar Navio</h2>
+            <form class="search-ship-form">
+                <input type="text" id="proc">
+            </form>
+            <p class="buttonp"><button class="naviosearch" type="button" onclick="procurarNavio()">Pesquisar</button></p>
+        </div>
+        <div class="caixa_reposta">
+            <h2 id="h2demo"></h2>
+            <p id="demo"></p>
+            <a id="linkdemo"></a>
+        </div>
 
-		</div>
+        <div class="mapa">
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1963454.1163224394!2d-25.11019075396586!3d16.020212710536992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9358f2159115131%3A0x6b1af236f918ea1f!2sCape%20Verde!5e0!3m2!1sen!2scv!4v1609956863008!5m2!1sen!2scv"
+                    width="1268" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </p>
+        </div>
 
-		<div class="mapa">
-			
-			<p>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1963454.1163224394!2d-25.11019075396586!3d16.020212710536992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9358f2159115131%3A0x6b1af236f918ea1f!2sCape%20Verde!5e0!3m2!1sen!2scv!4v1609956863008!5m2!1sen!2scv" width="1268" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-			</p>
-		
-		</div>	
-
-		<div class="containericon">
-			<div class="incon1">
-				<p><a href="portos.html"><img src="images/navios/ancora.png"></a></p>
-
-			</div>
-			<div class="icon1">
-				<p><a href="navios.html"><img src="images/transferir.png"></a></p>
-
-			</div>
-
-
-
-		</div>			
-		
-		
-
-
-		
-		
-		
-		
-	
-	</body>
-
-
+        <div class="containericon">
+            <a href="./pages/portos.html"><i class="fas fa-anchor fa-2x"></i></a>
+            <a href="./pages/navios.html" style="float: right;"><i class="fas fa-ship fa-2x"></i></a>
+        </div>
+    </div>
+</body>
 
 </html>
